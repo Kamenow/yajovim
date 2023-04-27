@@ -1,3 +1,4 @@
+-- local builtin = require('telescope.builtin')
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -7,7 +8,7 @@ local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
 --[[
-{Mode} 
+{Mode}
 {keyCombination}
 {Command}
 --]]
@@ -41,7 +42,6 @@ keymap("n", "<leader>l", ":vsp <CR>", opts)
 keymap("n", "<leader>j", ":split <CR>", opts)
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-keymap("n", "<C-n>", ":Lexplore <CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -83,3 +83,14 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- Telescope
+keymap('n', '<C-p>', ':Telescope find_files<CR>', {})
+keymap('n', '<C-o>', ':Telescope git_branches<CR>', {})
+keymap('n', '<C-f>', ':Telescope live_grep<CR>', {})
+-- keymap.set('n', '<leader>fb', builtin.buffers, {})
+-- keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- NERDTree
+keymap("n", "<C-n>", ":NERDTree<CR>", opts)
+keymap("n", "<C-A-n>", ":NERDTreeClose<CR>", opts)
