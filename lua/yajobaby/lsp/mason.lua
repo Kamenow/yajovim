@@ -1,3 +1,4 @@
+-- add lsp servers here
 local servers = {
     "lua_ls",
     "pyright",
