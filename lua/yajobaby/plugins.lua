@@ -45,6 +45,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
+  use "windwp/nvim-autopairs" -- Autopairs
 
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "nvim-lualine/lualine.nvim", requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
@@ -85,7 +86,6 @@ return packer.startup(function(use)
   }
 
   -- nerdtree
-
   use "preservim/nerdtree"
 
   -- Automatically set up your configuration after cloning packer.nvim

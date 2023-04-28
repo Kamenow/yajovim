@@ -55,6 +55,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Mine
 -- keymap("n", "<C-d>", "zz", term_opts)
+keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -85,12 +86,13 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
-keymap('n', '<C-p>', ':Telescope find_files<CR>', {})
-keymap('n', '<C-o>', ':Telescope git_branches<CR>', {})
-keymap('n', '<C-f>', ':Telescope live_grep<CR>', {})
+keymap("n", "<C-p>", ":Telescope find_files<CR>", {})
+keymap("n", "<C-o>", ":Telescope git_branches<CR>", {})
+keymap("n", "<C-f>", ":Telescope live_grep<CR>", {})
 -- keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- NERDTree
-keymap("n", "<C-n>", ":NERDTree<CR>", opts)
-keymap("n", "<C-A-n>", ":NERDTreeClose<CR>", opts)
+keymap("n", "<C-n>", ":NERDTreeToggle<CR>", opts)
+-- keymap("n", "<C-n>", ":NERDTree<CR>", opts)
+-- keymap("n", "<C-A-n>", ":NERDTreeClose<CR>", opts)
