@@ -1,0 +1,6 @@
+comments 
+format on save
+git integration
+treesitter highlights turn 
+terminal
+tabs
