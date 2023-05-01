@@ -36,12 +36,16 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- TODO: change to Ctrl + Shift + l
 keymap("n", "<leader>l", ":vsp <CR>", opts)
 keymap("n", "<leader>j", ":split <CR>", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+
+--keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -83,7 +87,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+--keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
 keymap("n", "<C-p>", ":Telescope find_files<CR>", {})
@@ -96,3 +100,7 @@ keymap("n", "<C-f>", ":Telescope live_grep<CR>", {})
 keymap("n", "<C-n>", ":NERDTreeToggle<CR>", opts)
 -- keymap("n", "<C-n>", ":NERDTree<CR>", opts)
 -- keymap("n", "<C-A-n>", ":NERDTreeClose<CR>", opts)
+
+-- BufferLine
+keymap("n", "<L>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<H>", ":BufferLineCyclePrev<CR>", opts)
