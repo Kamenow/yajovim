@@ -1,5 +1,6 @@
 local fn = vim.fn
 
+
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -45,7 +46,16 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
-  use "windwp/nvim-autopairs" -- Autopairs
+  use "windwp/nvim-autopairs"  -- Autopairs
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
 
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "nvim-lualine/lualine.nvim", requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
@@ -89,7 +99,7 @@ return packer.startup(function(use)
   use "preservim/nerdtree"
 
   -- bufferline(tabs)
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

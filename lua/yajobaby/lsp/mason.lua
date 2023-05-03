@@ -7,6 +7,7 @@ local servers = {
 	"cssmodules_ls",
 	"html",
 	"emmet_ls",
+	"csharp-ls",
 }
 
 local settings = {
