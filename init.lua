@@ -10,5 +10,6 @@ require("yajobaby.treesitter")
 require("yajobaby.autopairs")
 require("yajobaby.lsp.null-ls")
 require("yajobaby.bufferline")
-require("lua.yajobaby.nvim-surround")
+require("yajobaby.nvim-surround")
+require("yajobaby.nerdtree")
 
